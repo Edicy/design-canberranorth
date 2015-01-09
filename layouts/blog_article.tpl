@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-	
+
 {% include "SiteHeader" %}
 {{ blog.rss_link }}
 <style type="text/css">
@@ -15,31 +15,31 @@
 </head>
 
 <body>
-	
+
 	<div id="wrap">
-    
+
     <div id="content_sub">
-      
+
       <div id="header">
-          
+
           <div id="company_name" class="clearfix">
              {% if editmode %}{% editable site.header %}{% else %}<a href="{{ site.root_item.url }}">{% editable site.header %}</a>{% endif %}
           </div> <!-- //company-name -->
-          
+
 {% include "Mainmenu" %}
-          
+
           <div class="clearer"></div>
 </div>
 <div id="cont_front">
-           
+
 {% include "Submenu" %}
-          
+
 {% include "Langmenu" %}
           <div class="clearer"></div>
       </div> <!-- //header -->
-      
+
     </div> <!-- /content_sub-->
-    
+
     <div id="darkcontent">
         <div id="darkcontent_wrap">
       <div id="darkcontent_inner">
@@ -48,16 +48,16 @@
 </h1>
 
       </div> <!-- //darkcontent_inner -->
-        
+
 {% include "Search" %}
         </div>
     </div> <!-- //darkcontent -->
-    
+
     <div id="content">
-      
+
       <div id="content_left">
-        
-        
+
+
         <div class="blog clearfix">
           <div class="blog_datebox" style="float: left;">
             <div class="blog_date">
@@ -68,8 +68,8 @@
             </div> <!-- //blog_date -->
           </div>
           <span class="blog_autor">{{ "author" |lc }}: {{ article.author.name }}</span><br />
-          <div class="excerpt">{% editable article.excerpt %}</div>
-          {% editable article.body %}
+          <div class="excerpt" data-search-indexing-allowed="true">{% editable article.excerpt %}</div>
+          <div data-search-indexing-allowed="true">{% editable article.body %}</div>
           {% if editmode %}
                 <div class="article-tags">
                     <div class="article-tag-icon"></div>
@@ -86,11 +86,11 @@
                 {% endunless %}
             {% endif %}
         </div> <!-- //blog -->
-        
+
         <div id="blog_comment">
           <div class="hr"><a name="comments"></a><h4>{{ "comments_for_count" |lc }}: <span class="edy-site-blog-comments-count">{{ article.comments_count }}</span>
 </h4></div>
-     
+
       {% for comment in article.comments %}
       <p class="edy-site-blog-comment">{{ comment.body_html }}
       <br /><span class="data2">{{ comment.author }}, {{ comment.created_at | format_date:"long" }}</span> {% removebutton %}</p>
@@ -135,22 +135,22 @@ return null;
                 <tr>
                   <td colspan="4" style="text-align: center;"><span class="submit" onclick="findAncestor(this,'form').submit();"><span class="submit2">{{ "submit" |lc }}</span></span></td>
                 </tr>
-                
+
             </table>
 {% endcommentform %}
         </div>
-        
-          
+
+
       </div> <!-- //content_left -->
-      
+
 {% include "News" %}
-      
+
       <div class="clearer"></div>
-      
+
     </div> <!-- //content -->
-    
+
 {% include "Footer" %}
-    
+
   </div> <!-- //wrap -->
   {% include "JS" %}
 </body>
