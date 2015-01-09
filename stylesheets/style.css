@@ -326,7 +326,6 @@ width: 70px;
       width: 410px;
       padding: 25px 24px;
 background:url("../images/north_content.png?1") repeat-y left;
-  overflow: hidden;
     }
 #content_left_inner {
   width: 410px;
@@ -702,7 +701,6 @@ padding: 0 57px;
 }
 #front #cont_front {
 height: 226px;
-overflow: hidden;
 background: transparent url('../images/flower.png?1') no-repeat scroll center bottom;
 }
 
@@ -826,6 +824,32 @@ img {  max-width: 100%;  height: auto;  width: auto\9; /* ie8 */   }
       #search .submit {
         width: 25.8%;
       }
+}
+
+/* Voog cms style overrides */
+#wrap .edy-empty-bordered {
+  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px dashed #FFFFFF;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+}
+#wrap .placeholder {
+  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.5);
+}
+#wrap .edy-content-element-hover {
+  border: 1px solid #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+#wrap .edy-texteditor-active {
+  outline: 1px solid rgba(255, 255, 255, 0.4);
+}
+#wrap .edy-texteditor-active:hover {
+  outline: 1px solid rgba(255, 255, 255, 0.63);
+}
+
+#wrap .edy-taglist {
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 @media screen and (max-width: 480px) {

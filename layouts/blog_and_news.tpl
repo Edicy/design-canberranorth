@@ -2,60 +2,60 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-	
+
 {% include "SiteHeader" %}
 {{ blog.rss_link }}
-	
+
 	<style type="text/css">
-   
+
    * html #content_left {
       background-image: none;
      filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='{{images_path}}/north_content.png');
     }
-    
+
   </style>
 
 </head>
 
 <body id="blogbody">
-	
+
 	<div id="wrap">
-    
+
     <div id="content_sub">
-      
+
       <div id="header">
-          
+
           <div id="company_name" class="clearfix">
              {% if editmode %}{% editable site.header %}{% else %}<a href="{{ site.root_item.url }}">{% editable site.header %}</a>{% endif %}
           </div> <!-- //company-name -->
-          
+
 {% include "Mainmenu" %}
-          
+
           <div class="clearer"></div>
 </div>
-<div id="cont_front">
-           
+<div id="cont_front" class="clearfix">
+
 {% include "Submenu" %}
-          
+
 {% include "Langmenu" %}
           <div class="clearer"></div>
       </div> <!-- //header -->
-      
+
     </div> <!-- /content_sub-->
-    
+
     <div id="darkcontent">
         <div id="darkcontent_wrap">
       <div id="darkcontent_inner">
         <h1 class="heading">{{ page.title }}</h1>
       </div> <!-- //darkcontent_inner -->
-        
+
 {% include "Search" %}
         </div>
     </div> <!-- //darkcontent -->
-    
+
     <div id="content">
-      
-      <div id="content_left">
+
+      <div id="content_left" class="clearfix">
         {% if tags %}
             <div class="blog tagged-list-header">
                 <div class="header-tag-icon"></div>
@@ -67,7 +67,7 @@
             </div>
         {% endif %}
         {% addbutton class="add-article" %}
-        
+
         {% for article in articles %}
         <div class="blog">
           <table>
@@ -88,18 +88,18 @@
             </tr>
           </table>
         </div> <!-- //blog -->
-  {% endfor %}        
-          
+  {% endfor %}
+
       </div> <!-- //content_left -->
-      
+
 {% include "News" %}
-      
+
       <div class="clearer"></div>
 {% include "Footer" %}
       <div class="clearer"></div>
     </div> <!-- //content -->
-    
-    
+
+
   </div> <!-- //wrap -->
   {% include "JS" %}
 </body>

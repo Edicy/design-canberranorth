@@ -31,7 +31,7 @@
 {% include "Mainmenu" %}
           <div class="clearer"></div>
           </div>
-<div id="cont_front">
+<div id="cont_front" class="clearfix">
 
 {% include "Langmenu" %}
 

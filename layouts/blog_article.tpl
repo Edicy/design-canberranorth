@@ -30,7 +30,7 @@
 
           <div class="clearer"></div>
 </div>
-<div id="cont_front">
+<div id="cont_front" class="clearfix">
 
 {% include "Submenu" %}
 
@@ -55,7 +55,7 @@
 
     <div id="content">
 
-      <div id="content_left">
+      <div id="content_left" class="clearfix">
 
 
         <div class="blog clearfix">
