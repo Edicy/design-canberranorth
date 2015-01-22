@@ -68,8 +68,8 @@
             </div> <!-- //blog_date -->
           </div>
           <span class="blog_autor">{{ "author" |lc }}: {{ article.author.name }}</span><br />
-          <div class="excerpt" data-search-indexing-allowed="true">{% editable article.excerpt %}</div>
-          <div data-search-indexing-allowed="true">{% editable article.body %}</div>
+          <div class="excerpt content-hyphenate" data-search-indexing-allowed="true">{% editable article.excerpt %}</div>
+          <div class="content-hyphenate" data-search-indexing-allowed="true">{% editable article.body %}</div>
           {% if editmode %}
                 <div class="article-tags">
                     <div class="article-tag-icon"></div>
@@ -92,7 +92,7 @@
 </h4></div>
 
       {% for comment in article.comments %}
-      <p class="edy-site-blog-comment">{{ comment.body_html }}
+      <p class="edy-site-blog-comment content-hyphenate">{{ comment.body_html }}
       <br /><span class="data2">{{ comment.author }}, {{ comment.created_at | format_date:"long" }}</span> {% removebutton %}</p>
       <br />
       {% endfor %}

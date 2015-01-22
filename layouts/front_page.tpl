@@ -37,7 +37,7 @@
 
           <div id="slogan">
 
-            <div id="slogan2" class="clearfix" data-search-indexing-allowed="true">
+            <div id="slogan2" class="clearfix content-hyphenate" data-search-indexing-allowed="true">
               {% content name="slogan" %}
             </div><!-- //slogan2 -->
 

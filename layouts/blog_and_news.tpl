@@ -69,7 +69,7 @@
         {% addbutton class="add-article" %}
 
         {% for article in articles %}
-        <div class="blog">
+        <div class="blog clearfix  content-hyphenate">
           <table>
             <tr>
               <td class="blog_datebox">
