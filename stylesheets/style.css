@@ -325,6 +325,10 @@ width: 70px;
       width: 200px;
     }
 
+    .voog-search-modal {
+      z-index: 2;
+    }
+
 
 /* content */
 
