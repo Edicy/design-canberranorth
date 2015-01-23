@@ -19,7 +19,7 @@
 
 <body id="blogbody">
 
-	<div id="wrap">
+	<div id="wrap" class="content-hyphenate">
 
     <div id="content_sub">
 
@@ -69,7 +69,7 @@
         {% addbutton class="add-article" %}
 
         {% for article in articles %}
-        <div class="blog clearfix  content-hyphenate">
+        <div class="blog clearfix ">
           <table>
             <tr>
               <td class="blog_datebox">

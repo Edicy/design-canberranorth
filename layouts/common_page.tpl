@@ -15,7 +15,7 @@
 
 <body>
 
-	<div id="wrap">
+	<div id="wrap" class="content-hyphenate">
 
     <div id="content_sub">
 
@@ -54,7 +54,7 @@
     <div id="content">
 
       <div id="content_left" class="clearfix">
-        <div id="content_left_inner" class="clearfix content-hyphenate" data-search-indexing-allowed="true">
+        <div id="content_left_inner" class="clearfix" data-search-indexing-allowed="true">
        {% content %}
         </div>
       </div> <!-- //content_left -->

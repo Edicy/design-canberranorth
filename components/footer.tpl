@@ -1,5 +1,5 @@
     <div id="footer">
-      <div id="footer_inner" class="clearfix content-hyphenate">
+      <div id="footer_inner" class="clearfix">
         {% content name="footer" xpage="true" %}
       </div> <!-- //footer_inner -->
       
